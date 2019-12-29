@@ -82,9 +82,14 @@ Note that the `curl` command should be one long line.
 
 Once you have your Hazel rule configured, choose "Run Shell Script" as the action. Click on "Embedded Script" and choose “Other” as shown here:
 
-![Hazel screenshot](https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/Hazel-MSOffice.png)
+![Hazel screenshot before](https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/Hazel-MSOffice.png)
 
 Then choose the `msoffice-tag-with-companyname.sh` script from **~/bin/**
+
+It should look something like this:
+
+![Hazel screenshot after](https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/Hazel-MSOffice-2.png)
+
 
 ## Step Three
 
