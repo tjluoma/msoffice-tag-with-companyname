@@ -3,9 +3,9 @@ Look for company name in Microsoft Word Documents and tag file with name
 
 A user at <https://forum.keyboardmaestro.com/t/apple-script-help/16492> asked:
 
-> I'm looking for a simple Apple Script to use with Hazel that looks at the Company Name in the summary box of a Microsoft Word document and then tags the document with the name of the company. 
+> I’m looking for a simple Apple Script to use with Hazel that looks at the Company Name in the summary box of a Microsoft Word document and then tags the document with the name of the company.
 >
-> I have 22,000 documents to sort from lots of different companies and it would help if I could initially tag each one with the name of the company it relates to. 
+> I have 22,000 documents to sort from lots of different companies and it would help if I could initially tag each one with the name of the company it relates to.
 
 This is clearly an excellent case for automation.
 
@@ -71,7 +71,7 @@ mkdir ~/bin/
 
 cd ~/bin/
 
-curl -sfLS "https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/msoffice-tag-with-companyname.sh" > msoffice-tag-with-companyname.sh
+curl -sfLS 'https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/msoffice-tag-with-companyname.sh' > msoffice-tag-with-companyname.sh
 
 chmod 755 msoffice-tag-with-companyname.sh
 ```
@@ -80,7 +80,7 @@ Note that the `curl` command should be one long line.
 
 ## Step Two: Tell Hazel to use the script:
 
-Once you have your Hazel rule configured, choose "Run Shell Script" as the action. Click on "Embedded Script" and choose “Other” as shown here:
+Once you have your Hazel rule configured, choose “Run Shell Script” as the action. Click on “Embedded Script” and choose “Other” as shown here:
 
 ![Hazel screenshot before](https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/Hazel-MSOffice.png)
 
@@ -104,12 +104,10 @@ If you find a file that _has_ a company name but _does not_ work with this scrip
 
 `mdls "/path/to/your/filename.ext"`
 
-For example, if the file is on your Desktop and is called 'My Report.doc" then you would do:
+For example, if the file is on your Desktop and is called “My Report.doc” then you would do:
 
 `mdls "$HOME/Desktop/My Report.doc"`
 
 and copy/paste the output into a message here so I can see it. If the company name does not appear in the output of `mdls` then we’ll have to look for another way to find it.
 
-
-
-
+★
