@@ -41,6 +41,8 @@ It will be stored at **$HOME/Library/Logs/msoffice-tag-with-companyname.log** wh
 
 ## How do I use this with Hazel?
 
+## Step One: Download the script and make it executable
+
 Download [msoffice-tag-with-companyname.sh](https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/msoffice-tag-with-companyname.sh) and save it somewhere such as **"$HOME/bin"**:
 
 ```
@@ -55,9 +57,15 @@ chmod 755 msoffice-tag-with-companyname.sh
 
 Note that the `curl` command should be one long line.
 
+## Step Two: Tell Hazel to use the script:
 
+Once you have your Hazel rule configured, choose "Run Shell Script" as the action. Click on "Embedded Script" and choose “Other” as shown here:
 
-```
+![Hazel screenshot](https://raw.githubusercontent.com/tjluoma/msoffice-tag-with-companyname/master/Hazel-MSOffice.png)
 
+Then choose the `msoffice-tag-with-companyname.sh` script from **~/bin/**
 
+## Step Three
+
+[There’s no step three](https://www.youtube.com/watch?v=6uXJlX50Lj8).
 
