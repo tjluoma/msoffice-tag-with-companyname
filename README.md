@@ -19,6 +19,14 @@ The script is very straightforward, and _attempts_ to be at least minimally smar
 
 will tag the file `FILENAME.docx` with the company name.
 
+`msoffice-tag-with-companyname.sh *.docx`
+
+will tag all of the files with a `.docx` extension.
+
+`msoffice-tag-with-companyname.sh *`
+
+will attempt to tag all of the files in the current directory.
+
 ### What if there is no company name?
 
 A message will be logged and nothing will be done.
@@ -30,6 +38,19 @@ A message will be logged and nothing will be done.
 ### What if I try to run the command on a file that is not a Microsoft Office document?
 
 If the file does not match a list of known filename extensions (which can be set in the script) then a message will be logged and nothing will be done.
+
+By default the script will only try to tag the file if it has one of these file extensions:
+
+* doc
+* docx
+* xls
+* ppt
+
+You can easily edit that list by changing this line in the script:
+
+```
+      'doc'|'docx'|'xls'|'ppt')
+```
 
 ### What if the `tag` command fails for some reason?
 
@@ -68,4 +89,22 @@ Then choose the `msoffice-tag-with-companyname.sh` script from **~/bin/**
 ## Step Three
 
 [There’s no step three](https://www.youtube.com/watch?v=6uXJlX50Lj8).
+
+
+## Caveat
+
+This script has only has limited testing, so I cannot guarantee that it will work on all Microsoft Word files, or Microsoft Office files.
+
+If you find a file that _has_ a company name but _does not_ work with this script, enter this line in Terminal:
+
+`mdls "/path/to/your/filename.ext"`
+
+For example, if the file is on your Desktop and is called 'My Report.doc" then you would do:
+
+`mdls "$HOME/Desktop/My Report.doc"`
+
+and copy/paste the output into a message here so I can see it. If the company name does not appear in the output of `mdls` then we’ll have to look for another way to find it.
+
+
+
 
